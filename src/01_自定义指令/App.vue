@@ -1,47 +1,43 @@
 <script setup>
-// 方式一: 定义ref绑定input中, 调用focus
-// import useInput from './hooks/useInput'
-// const { inputRef } = useInput()
+import { ref } from 'vue'
 
-// 方式二: 自定义指令
-// const vFocus = {
-//   // 生命周期的函数(自定义指令的)
-//   mounted(el) {
-//     console.log('当前元素: ', el);
-//     el.focus()
-//   }
-// }
+
+const vCustom = {
+  created() {
+    console.log('created')
+  },
+  beforeMount() {
+    console.log('beforeMount')
+  },
+  mounted() {
+    console.log('mounted')
+  },
+  beforeUpdate() {
+    console.log('beforeUpdate')
+  },
+  updated() {
+    console.log('updated')
+  },
+  beforeUnmount() {
+    console.log('beforeUnmount')
+  },
+  unmounted() {
+    console.log('created')
+  },
+}
+
+const counter = ref(0)
+const showTitle = ref(true)
 
 </script>
 
 <template>
   <div class="app">
-    <span>方式一: </span>
-    <input type="text" ref="inputRef">
-    <br>
-    <span>方式二: </span>
-    <input type="text" v-focus>
-    <span>自定义局部指令</span>
-    <br>
-    <span>方式三: </span>
-    <input type="text">
-    <span>自定义全局指令</span>
+    <button @click="counter++">++</button>
+    <button @click="showTitle = !showTitle">隐藏</button>
+    <h2 v-if="showTitle" v-custom>当前计数: {{ counter }}</h2>
   </div>
 </template>
-
-<!-- <script>
-export default {
-  directives: {
-    focus: {
-      // 生命周期的函数(自定义指令的)
-      mounted(el) {
-        console.log('当前元素: ', el);
-        el.focus()
-      }
-    }
-  }
-}
-</script> -->
 
 <style scoped>
 
