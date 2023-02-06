@@ -4,13 +4,13 @@
 // const { inputRef } = useInput()
 
 // 方式二: 自定义指令
-const vFocus = {
-  // 生命周期的函数(自定义指令的)
-  mounted(el) {
-    console.log('当前元素: ', el);
-    el.focus()
-  }
-}
+// const vFocus = {
+//   // 生命周期的函数(自定义指令的)
+//   mounted(el) {
+//     console.log('当前元素: ', el);
+//     el.focus()
+//   }
+// }
 
 </script>
 
