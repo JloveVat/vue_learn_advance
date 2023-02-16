@@ -11,20 +11,19 @@
 //     el.focus()
 //   }
 // }
-
 </script>
 
 <template>
   <div class="app">
     <span>方式一: </span>
-    <input type="text" ref="inputRef">
-    <br>
+    <input type="text" ref="inputRef" />
+    <br />
     <span>方式二: </span>
-    <input type="text" v-focus>
+    <input type="text" v-focus />
     <span>自定义局部指令</span>
-    <br>
+    <br />
     <span>方式三: </span>
-    <input type="text">
+    <input type="text" />
     <span>自定义全局指令</span>
   </div>
 </template>
@@ -43,6 +42,4 @@ export default {
 }
 </script> -->
 
-<style scoped>
-
-</style>
+<style scoped></style>
