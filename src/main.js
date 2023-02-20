@@ -1,16 +1,29 @@
 import { createApp } from 'vue'
+import router from './router'
 // import App from './01_自定义指令/01_自定义指令基本使用.vue'
 // import App from './01_自定义指令/02_自定义指令生命周期.vue'
 // import App from './01_自定义指令/03_自定义指令参数修饰符和值.vue'
 // import App from './01_自定义指令/App.vue'
 
-import App from './02_内置组件补充/App.vue'
+// import App from './02_内置组件补充/App_teleport.vue'
+// import App from './02_内置组件补充/App.vue'
 
-import useDirectives from './01_自定义指令/directives';
+// import App from './03_安装插件/App.vue'
 
-const app = createApp(App)
+// import App from './04_Render函数/01_render函数基本使用.vue'
+// import App from './04_Render函数/02_render函数计数器实现.vue'
+import App from './04_Render函数/App.vue'
 
-useDirectives(app)
+// import useDirectives from './01_自定义指令/directives'
+import directives from './01_自定义指令/directives'
+
+
+// const app = createApp(App)
+// useDirectives(app)
+// app.mount('#app')
+
+// 链式调用
+createApp(App).use(directives).mount('#app')
 
 // app.directive('focus', {
 //   mounted(el) {
@@ -18,5 +31,3 @@ useDirectives(app)
 //     el?.focus()
 //   }
 // })
-
-app.mount('#app')

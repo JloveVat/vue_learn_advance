@@ -3,7 +3,7 @@
 
 <template>
   <div class="app">
-    
+    <h2>安装插件</h2>
   </div>
 </template>
 
