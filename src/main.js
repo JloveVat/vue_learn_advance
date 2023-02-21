@@ -12,7 +12,15 @@ import router from './router'
 
 // import App from './04_Render函数/01_render函数基本使用.vue'
 // import App from './04_Render函数/02_render函数计数器实现.vue'
-import App from './04_Render函数/App.vue'
+// import App from './04_Render函数/App.vue'
+
+// import App from './05_JSX的语法/01_jsx语法基本使用.vue'
+// import App from './05_JSX的语法/02_jsx语法实现计数器.vue'
+// import App from './05_JSX的语法/App.vue'
+
+// import App from './06_过渡动画/01_transition动画.vue'
+// import App from './06_过渡动画/02_animation动画.vue'
+import App from './06_过渡动画/App.vue'
 
 // import useDirectives from './01_自定义指令/directives'
 import directives from './01_自定义指令/directives'
